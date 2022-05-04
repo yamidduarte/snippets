@@ -20,7 +20,9 @@ public class DequeExample {
 
     // Implementation example
 
-  
+    Deque<Integer> stack = ArrayDeque<>();
+    stack.push(1);
+    stack.pop(1);
   
   }
 
