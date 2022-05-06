@@ -1,0 +1,41 @@
+package com.yamidduarte;
+
+import java.util.HashSet;
+import java.util.Set;
+
+public class Solution {
+
+    int max;
+
+    public int evaluate(String s) {
+        if (s.length() == 0) return 0;
+        if (s.length() == 1) return 1;
+        Set<Character> set = new HashSet<>();
+        max = 0;
+
+        for (int i = 0; i < s.length(); i++) {
+            if (set.contains(s.charAt(i))) {
+                max = Math.max(set.size(), max);
+                recurse(s, i);
+            }
+            set.add(s.charAt(i));
+            max = Math.max(set.size(), max);
+        }
+        return max;
+    }
+
+    private void recurse(String s, int x) {
+        if (x == s.length()) return;
+
+        Set<Character> rSet = new HashSet<>();
+
+        for (int i = x; i < s.length(); i++) {
+            if (rSet.contains(s.charAt(i))) {
+                max = Math.max(rSet.size(), max);
+                recurse(s, i);
+            }
+            rSet.add(s.charAt(i));
+        }
+    }
+
+}
