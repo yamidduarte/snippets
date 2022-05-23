@@ -1,4 +1,5 @@
 class Solution {
+    
     public int findCheapestPrice(int n, int[][] flights, int src, int dst, int K) {
              
         long[][] distances = new long[2][n];
@@ -16,6 +17,7 @@ class Solution {
             }
         return distances[K&1][dst] < Integer.MAX_VALUE ? (int) distances[K&1][dst] : -1;
     }
+    
 }
 
 // T: O(K*E), since we have K + 1 iterations, and in each iteration we go over all the edges in the graph
