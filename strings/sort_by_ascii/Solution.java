@@ -55,10 +55,12 @@ public class Solution {
     }
 
     private void printChars() {
+        
         StringBuilder printOutput = new StringBuilder();
         for (char ch : array)
             printOutput.append(ch);
         System.out.println(printOutput);
+        
     }
 
 }
