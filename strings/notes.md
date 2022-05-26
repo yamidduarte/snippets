@@ -1,1 +1,3 @@
-some examples of strings
+Some examples of strings
+  
+  
