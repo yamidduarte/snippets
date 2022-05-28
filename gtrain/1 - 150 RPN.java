@@ -1,4 +1,4 @@
-class Solution {
+class Solution { // O(n) both
     
     private static final Map<String, BiFunction<Integer, Integer, Integer>> OPERATIONS = new HashMap<>();
     
