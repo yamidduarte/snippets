@@ -1,4 +1,5 @@
-class Solution {
+class Solution { // O(n + m) , O(1) 
+    
     public void merge(int[] nums1, int m, int[] nums2, int n) {
         
         var p1 = m - 1;
